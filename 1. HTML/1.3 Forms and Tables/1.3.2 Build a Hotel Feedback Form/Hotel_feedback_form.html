@@ -1,0 +1,497 @@
+<!-- Solution -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hotel Feedback Form</title>
+  </head>
+  <body>
+    <header>
+      <h1>Hotel Feedback Form</h1>
+      <p>
+        Thank you for staying with us. Please provide feedback on your recent
+        stay.
+      </p>
+    </header>
+    <main>
+      <form method="POST" action="https://hotel-feedback.freecodecamp.org">
+        <fieldset>
+          <legend>Personal Information</legend>
+          <label for="full-name">Name (required):</label>
+          <input type="text" id="full-name" name="name" placeholder="e.g., John Doe" required size="20">
+
+          <label for="email">Email address (required):</label>
+          <input
+            placeholder="example@email.com"
+            required
+            id="email"
+            type="email"
+            name="email"
+            size="20"
+          />
+          <label for="age">Age (optional):</label>
+          <input type="number" name="age" id="age" min="3" max="100" />
+        </fieldset>
+
+        <fieldset>
+          <legend>Was this your first time at our hotel?</legend>
+          <input id="yes-option" type="radio" name="hotel-stay" />
+          <label for="yes-option">Yes</label>
+          <input id="no-option" type="radio" name="hotel-stay" />
+          <label for="no-option">No</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>
+            Why did you choose to stay at our hotel? (Check all that apply)
+          </legend>
+
+          <input type="checkbox" id="ads" name="ads" value="ads" />
+          <label for="ads">Social Media Ads</label>
+
+          <input
+            type="checkbox"
+            id="recommendation"
+            name="recommendation"
+            value="recommendation"
+          />
+          <label for="recommendation">Personal Recommendation</label>
+          
+          <input type="checkbox" id="location" name="location" value="location" />
+          <label for="location">Location</label>
+
+          <input
+            checked
+            type="checkbox"
+            id="reputation"
+            name="reputation"
+            value="reputation"
+          />
+          <label for="reputation">Reputation</label>
+          
+          <input type="checkbox" id="price" name="price" value="price" />
+          <label for="price">Price</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Ratings</legend>
+
+          <label for="service">How was the service?</label>
+
+          <select name="service" id="service">
+            <option value="poor">Poor</option>
+            <option value="satisfactory">Satisfactory</option>
+            <option value="good">Good</option>
+            <option value="very-good">Very Good</option>
+            <option selected value="excellent">Excellent</option>
+          </select>
+
+          <label for="food">How was the food?</label>
+
+          <select name="food" id="food">
+            <option value="poor">Poor</option>
+            <option value="satisfactory">Satisfactory</option>
+            <option value="good">Good</option>
+            <option value="very-good">Very Good</option>
+            <option selected value="excellent">Excellent</option>
+          </select>
+        </fieldset>
+
+        <label for="comments">Other Comments?</label>
+        <textarea cols="30" rows="10" name="comments" id="comments"></textarea>
+
+        <button type="submit">Submit</button>
+      </form>
+    </main>
+  </body>
+</html>
+<!--
+
+### Step 1
+
+In this workshop, you will practice working with HTML forms by building a Hotel Feedback Form.
+For the introductory text, you will want to display the main title followed by a short note about leaving feedback.
+Inside your body element, add a header element.
+Inside the header element, add an h1 element. The h1 element's text should be Hotel Feedback Form.
+Below your h1 element, add a p element. The p element's text should be Thank you for staying with us.
+Please provide feedback on your recent stay.
+
+### Step 2
+
+Now, it is time to add the main element which represents the main content of the page.
+
+### Step 3
+
+In previous lessons, you learned how to work with the form element like this:
+
+Example Code
+
+<form method="value-goes-here" action="url-goes-here">
+  ## inputs go inside here ##
+</form>
+
+The action attribute is used to specify where the form data should be sent when the form is submitted.
+
+The method attribute is used to specify the HTTP method to use when sending the form data. The most common methods are GET and POST.
+
+NOTE: You will learn about how HTTP methods work in later modules.
+
+Inside your main element, add a form element with an action attribute set to "https://hotel-feedback.freecodecamp.org" and a method attribute set to "POST".
+
+### Step 4
+
+Forms consist of inputs where users can input their data. You can group related inputs together using the fieldset element.
+
+Here is an example of using a fieldset element:
+
+Example Code
+<form action="/example-url">
+  <fieldset>
+  ## inputs go inside here ##
+  </fieldset>
+</form>
+
+Inside your form element, add a fieldset element.
+
+### Step 5
+
+When working with `fieldset` elements, it is common to use a caption to describe the group of inputs.
+
+You can use the legend element for this.
+
+Here is an example of using a legend element:
+
+Example Code
+<form action="/example-url">
+  <fieldset>
+    <legend>Personal Information</legend>
+    ## inputs go inside here
+  </fieldset>
+</form>
+
+Inside your fieldset element, add a legend element with the text Personal Information.
+
+### Step 6
+
+In previous lessons, you learned how to associate a label element with an input like this:
+
+Example Code
+<label for="name">Name:</label>
+<input type="text" id="name" name="name">
+
+The for attribute on the label element should match the id attribute on the input element.
+This is known as an explicit association.
+
+Below your legend element, add a label element with the text of Name (required):.
+Set its for attribute to the value of "full-name".
+
+Then below your label element, add an input element with no attributes.
+
+In the next steps, you will add the necessary attributes.
+
+### Step 7
+
+When a user provides their full name, the input will accept plaintext.
+
+In previous lessons, you learned how to work with the type attribute like this:
+
+Example Code
+<input type="text">
+For your existing input element, add a type attribute set to "text".
+
+Also give the input element an id attribute with the value of "full-name".
+
+### Step 8
+
+The name attribute is used to identify form data after it has been submitted to the server.
+
+Here is an example of how to use the name attribute:
+
+Example Code
+<input type="email" name="email">
+
+Add a name attribute to the input element with the value of "name".
+
+### Step 9
+
+In previous lessons, you learned how to work with the placeholder and required attributes like this:
+
+Example Code
+<input type="text" placeholder="e.g., John Doe" required>
+
+For your existing input element, add a placeholder attribute with the value of "e.g., John Doe".
+
+Also, add the required attribute to the input element.
+
+### Step 10
+
+Your hotel feedback form should also collect an email address from the user.
+
+Start by adding a new label element with the text Email address (required): to the form.
+
+Your label element should have a for attribute set to the value of "email".
+
+### Step 11
+
+Next, add an input with the type of "email" below your email label.
+This input should have an id attribute set to the value of "email".
+Also, set the name attribute to the value of "email".
+
+This input is also required, so make sure to add the required attribute.
+
+Finally, add a placeholder attribute set to "example@email.com".
+
+### Step 12
+
+input elements can have a size attribute. This attribute defines the number of characters that should be visible as the user types into the input. The value of size should be a non-negative integer greater than zero. If size is not specified, or is specified with an invalid value, the input will have the default width set by the browser.
+
+Example Code
+<label for="lastName">Last Name:</label>
+<input id="lastName" name="lastName" type="text" size="10" />
+
+Give the name and email inputs a size attribute with a value of "20".
+
+### Step 13
+
+Your hotel feedback form should have an option for users to add their age.
+
+Start by adding a label element with the text Age (optional): to the form.
+
+The for attribute should be set to "age".
+
+### Step 14
+
+The number input is used to create a numeric input field.
+
+Here is an example of a number input field:
+
+Example Code
+<input type="number" id="age" name="age" min="18" max="100">
+The min and max attributes are used to set the minimum and maximum values that can be entered in the input field.
+
+Below your label element, add an input with the type attribute set to "number" and an id of "age".
+
+The name attribute should be set to "age", the min attribute should be set to "3" and the max attribute should be set to "100".
+
+### Step 15
+
+The next section in the form will be responsible for asking users if they have stayed at the hotel before.
+
+Start by adding a fieldset element.
+
+Inside the fieldset element, add a legend element with the text of Was this your first time at our hotel?.
+
+### Step 16
+
+If you want users to select one option from a list of options, you can use a set of radio buttons.
+
+Here is an example of two radio buttons:
+
+Example Code
+<input type="radio" id="yes" name="first-time">
+<label for="yes">Yes</label>
+<input type="radio" id="no" name="first-time">
+<label for="no">No</label>
+
+In this example, the radio buttons are grouped together by using the same name attribute value.
+
+This means that only one radio button can be selected at a time.
+
+Below your legend element, add a radio button with the id set to "yes-option", and the name attribute set to "hotel-stay".
+
+Below your radio button, add a label element with the text Yes and a for attribute set to "yes-option".
+
+### Step 17
+
+Below your label element, add a radio button with the id set to "no-option", and the name attribute set to "hotel-stay".
+
+Below your new radio button, add another label element with the for attribute set to "no-option". The text for the label should be No.
+
+When you are finished, you can now try out the radio buttons by selecting one option at a time.
+
+### Step 18
+
+The next section of the form will ask users why they chose that particular hotel.
+Users will have the opportunity to select multiple options.
+
+Start by adding another fieldset element.
+
+Inside the fieldset element, add a legend element with the text Why did you choose to stay at our hotel? (Check all that apply).
+
+### Step 19
+
+When you want a user to select multiple options from a list, you can use checkboxes.
+
+Here is an example of how to work with checkboxes dealing with food options:
+
+Example Code
+<fieldset>
+  <legend>Food Options</legend>
+  <input type="checkbox" id="pizza" name="food" value="pizza">
+  <label for="pizza">Pizza</label>
+  <input type="checkbox" id="burger" name="food" value="burger">
+  <label for="burger">Burger</label>
+</fieldset>
+
+The value attribute is used to specify the value that will be sent to the server when the form is submitted.
+
+Below your legend element, add a checkbox input with the id, name and value attributes set to "ads".
+
+Below your checkbox input, add a label element with the text Social Media Ads. The for attribute should be set to "ads".
+
+### Step 20
+
+Add another checkbox input with the id, name and value attributes set to "recommendation".
+
+Below the checkbox input, add another label with the text Personal Recommendation. The for attribute should be set to "recommendation".
+
+### Step 21
+
+Next, add another checkbox input with the id, name and value attributes set to "location".
+
+For the label element, the text of Location and the for attribute should be set to "location".
+
+Below that label element, add another checkbox input with the id, name and value attributes set to "reputation".
+
+For the label element, the text of Reputation and the for attribute should be set to "reputation".
+
+### Step 22
+
+To make a checkbox input checked by default, you can add the checked attribute.
+
+Here is an example of using the checked attribute:
+
+Example Code
+<input checked type="checkbox" id="checked" name="checked">
+
+Add the checked attribute to the checkbox input with the id of "reputation" to make it checked by default.
+
+### Step 23
+
+For the final input and label inside this fieldset, you will add a checkbox input with the id, name and value attributes set to "price".
+
+Then, a label element with the text Price and the for attribute set to "price".
+
+Now you can test out your form by selecting the various checkboxes.
+
+### Step 24
+
+The next section of the form will provide users with the ability to leave a rating for the hotel.
+
+Start by adding a new fieldset element with a legend element nested inside. The legend should have the text Ratings.
+
+Below the legend element, add a label element with the text How was the service?. The for attribute should be set to "service".
+
+### Step 25
+
+When you want users to make selections from a dropdown menu, you can use the select and option elements.
+
+Here is an example of using the select and option elements to create a dropdown for different cities:
+
+Example Code
+<label for="city">Choose a City: </label>
+<select id="city" name="city">
+  <option value="new-york">New York</option>
+  <option value="los-angeles">Los Angeles</option>
+  <option value="chicago">Chicago</option>
+  <option value="miami">Miami</option>
+</select>
+
+Start by adding a select element with the name and id attributes set to "service".
+
+### Step 26
+
+Inside your select element, add the following five option elements with these corresponding values for the option text and value attribute:
+
+Value Attributes:
+
+poor
+satisfactory
+good
+very-good
+excellent
+Option Element Text:
+
+Poor
+Satisfactory
+Good
+Very Good
+Excellent
+
+### Step 27
+
+To make an option selected by default, you can add the selected attribute to the option element you want to be selected.
+
+Here is an example using the selected attribute:
+
+Example Code
+<option selected value="amazing">Amazing</option>
+
+Inside your select element, add the selected attribute to the option element with the value of "excellent".
+
+### Step 28
+
+Your hotel feedback form should also give users the ability to rate the food.
+
+Start by adding a label element with the text of How was the food?. That label element should have a for attribute set to "food".
+
+Below your label element, add a select element with an id and name set to "food".
+
+### Step 29
+
+Inside your select element, add the following five option elements with these corresponding values for the option text and value attribute:
+
+Value Attribute:
+
+poor
+satisfactory
+good
+very-good
+excellent
+Option Text:
+
+Poor
+Satisfactory
+Good
+Very Good
+Excellent
+Don't forget to add the selected attribute to the option element with the value of "excellent".
+
+### Step 30
+
+The last section of the form will allow users to provide any additional feedback they like about the hotel.
+
+Start by adding a label element with the text of Other Comments? and a for attribute set to "comments".
+
+### Step 31
+
+If you want users to have more space to write their comments, you can use a textarea element.
+
+The textarea element is a multi-line text input control that allows users to enter text that is longer than a single line.
+It can be used to create a comment box, a message input, or other text input that requires multiple lines.
+
+Here's an example of a textarea element:
+
+Example Code
+<textarea id="comments" name="comments" rows="4" cols="50"></textarea>
+The rows attribute is used to specify the visible height of the textarea, and the cols attribute is used to specify the visible width of the textarea.
+
+Below your label element, add a textarea element. In the next step, you will add the necessary attributes.
+
+### Step 32
+
+For your textarea element, add an id and name attribute with the value of "comments".
+
+For the cols attribute set the value to 30 and for the rows attribute set the value to 10.
+
+### Step 33
+
+For the last step in the hotel feedback form workshop, you will need to add a submit button to the form.
+
+Remember that you learned how to work submit buttons in previous lessons.
+
+Add a button element with the type attribute set to "submit" and the text content set to Submit.
+
+And with that, your hotel feedback form is complete!
+-->
