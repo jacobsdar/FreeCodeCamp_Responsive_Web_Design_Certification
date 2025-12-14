@@ -1,0 +1,104 @@
+<!--
+
+Build an Event Hub
+
+Build an app that is functionally similar to this example project.
+Try not to copy the example project, give it your own personal style.
+
+In this lab you will utilize the semantic HTML elements to create the structure of a web page.
+You'll add content and images to make it look like a real event hub.
+
+Objective: Fulfill the user stories below and get all the tests to pass to complete the lab.
+
+User Stories:
+
+1. You should have a header element.
+2. Inside the header element, you should have an h1 element that contains the text Event Hub, and a nav element.
+3. Inside the nav element, you should have an unordered list of two items containing links to different sections of the page.
+   The first item should have the text Upcoming Events, and the second item should have the text Past Events.
+4. Each link should be represented by an a element with an href attribute that
+   links to the corresponding section of the page, #upcoming-events and #past-events respectively.
+5. You should have a main element that contains the different sections of the page.
+6. Inside the main element, you should have two section elements.
+7. The first section element should have an id attribute with the value upcoming-events
+8. Inside the #upcoming-events section, you should have:
+   * An h2 element with the text Upcoming Events.
+   * Two article elements. Each article should represent an event, and it should have :
+   * An h3 element for the event title.
+   * A p element for the event description. You can add a date at the bottom if you like.
+9. The second section element should have an id attribute with the value past-events.
+10.Inside the #past-events section, you should have:
+   * An h2 element with the text Past Events.
+   * Two article elements. Each article element should represent a past event, and it should have:
+     * An h3 element for the event title,
+     * A p element for the event description. You can add a date at the bottom if you like.
+     * An image element with the src attribute pointing to an image file and the alt attribute with a description of the image.
+
+Note: You can use any text for the event descriptions and dates. You can use the following image URLs for the images if you like:
+
+https://cdn.freecodecamp.org/curriculum/labs/past-event1.jpg.
+https://cdn.freecodecamp.org/curriculum/labs/past-event2.jpg.
+
+-->
+
+<!-- Solution -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Event Hub</title>
+</head>
+
+<body>
+  <header>
+    <h1>Event Hub</h1>
+    
+    <nav>
+      <ul>
+        <li><a href="#upcoming-events">Upcoming Events</a></li>
+        <li><a href="#past-events">Past Events</a></li>
+      </ul>
+    </nav>    
+  </header>
+
+  <main>
+
+    <section id="upcoming-events">
+      <h2>Upcoming Events</h2>
+      
+      <article>
+        <h3>Electronic Workshop</h3>
+        <p>We are hosting an event for beginner hobbyists to get into the world of electronics. Kits can be purchased at the event, which will be used in our tutorial. *Kits will include reusable breadboards and components, so they can be reused after the event.</p>
+        <p>Event Time: <time datetime="2026-02-15T12:00">15 February 2026 at 12:00</time></p>
+      </article>
+      
+      <article>
+        <h3>Coding a Game</h3>
+        <p>We will be hosting an expert programmer who will take us through designing and coding a game from the ground up. The programmer will focus on first person shooters. So if you are passionate about shooters and have always wanted to build your own then join us</p>
+        <p>Event Time: <time datetime="2026-03-18T10:00">18 March 2026 at 10:00</time></p>
+      </article>
+
+    </section>
+
+    <section id="past-events">
+      <h2>Past Events</h2>
+      
+      <article>
+        <h3>Junkyard Sale</h3>
+        <p>All kinds of deals and interesting legacy hardware could be found at our Junkyard Sale event. From old beige, horizontally stacked PC's, to Apple's colorful, transparent designs, it was truly a treat for any tech aficionado. We are looking forward to hosting another successful event soon.</p>
+        <img src="https://cdn.freecodecamp.org/curriculum/labs/past-event1.jpg" alt="An old IBM computer that is switched on">
+      </article>
+      
+      <article>
+        <h3>Ethical Hacking Convention</h3>
+        <p>What an amazing event hosted, with multiple prizes up for sale, for "bounties" achieved by our Hackers, all in good fun and helping to guide, nurture and for companies to scout and recruit future I.T security gurus</p>
+        <img src="https://cdn.freecodecamp.org/curriculum/labs/past-event2.jpg" alt="A picture of futuristic geometric patterns containing spheres of nodes">
+      </article>
+
+    </section>
+  </main>
+</body>
+
+</html>
