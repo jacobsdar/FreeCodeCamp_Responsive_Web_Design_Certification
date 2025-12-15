@@ -1,0 +1,93 @@
+<!--
+
+### Build a Book Catalog Table
+
+Build an app that is functionally similar to this example project.
+Try not to copy the example project, give it your own personal style.
+
+### Objective: Fulfill the user stories below and get all the tests to pass to
+               complete the lab.
+
+### User Stories:
+
+1. You should create a table element that lists book information.
+2. Your table should have a table head element with one row in it.
+3. The row in your table head element should have four table header elements,
+   with the text of Title, Author, Genre, and Publication Year, in that order.
+4. Your table should have a table body element with at least five rows in it.
+5. Each row in your table body should have four table data elements
+   that display the book's Title, Author, Genre, and Publication Year.
+6. Your table should have a table footer element with one row in it.
+7. The row in your table footer element should have a table data element that spans
+   four columns and has the text Total Books: N where N should be replaced
+   by the number of books in your table.
+
+-->
+
+<!-- Solution -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Catalog</title>
+</head>
+
+<body>
+  <table>
+    <caption></caption>
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Genre</th>
+        <th>Publication Year</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>The Lord Of The Rings</td>
+        <td>J.R.R. Tolkien</td>
+        <td>High Fantasy</td>
+        <td>1954</td>
+      </tr>
+
+      <tr>
+        <td>Magician</td>
+        <td>Raymond E. Feist</td>
+        <td>Fantasy</td>
+        <td>1982</td>
+      </tr>
+
+      <tr>
+        <td>Neuromancer</td>
+        <td>William Gibson</td>
+        <td>Sci-Fi</td>
+        <td>1984</td>
+      </tr>
+
+      <tr>
+        <td>Do Androids Dream of Electric Sheep?</td>
+        <td>Philip K. Dick</td>
+        <td>Sci-Fi</td>
+        <td>1968</td>
+      </tr>
+
+      <tr>
+        <td>Berserk</td>
+        <td>Kentaro Miura</td>
+        <td>Manga</td>
+        <td>1989</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan="4">Total Books: 5</td>
+      </tr>
+    </tfoot>
+  </table>
+</body>
+
+</html>
